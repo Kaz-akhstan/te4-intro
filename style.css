@@ -1,5 +1,5 @@
 :root {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -38,6 +38,38 @@ h1 {
   font-size: 3rem;
   margin: 0;
   color: #b3b3b3;
+}
+
+.hand {
+  display: flex;
+  justify-content: center;
+}
+
+.card-container:hover {
+  cursor: pointer;
+  transform: translate(0, -5rem);
+  transition: 0.2s ease-in-out;
+}
+
+.card-container {
+  transition: 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 15rem;
+  height: 21.5rem;
+  border-radius: 1rem;
+  background-color: #213547;
+  box-sizing: border-box; 
+  padding: 1rem;
+}
+
+.card-title {
+  text-align: center;
+}
+
+.card-description {
+
 }
 
 #app {

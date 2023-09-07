@@ -1,7 +1,7 @@
 export function app (element) {
     const _speed = 100
     let i = 0
-    const _introduction = 'Detta är ett CV'
+    const _introduction = 'Detta är ett CV Detta är ett CV'
     element.querySelector('#start').addEventListener('click', (e) => {
         printLine(_introduction, '#test')
     })
