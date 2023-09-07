@@ -94,7 +94,7 @@ h1 {
 .health {
   height: 2rem;
   width: 100%;
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease-in-out;
   background-color: #646cff;
 }
 

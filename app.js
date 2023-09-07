@@ -4,6 +4,7 @@ export function app (element) {
     const _speed = 100
     const _animationSpeed = 500
     let _hp = 100
+    let _isPrinting = false
 
     createCard(cards.introduction)
     createCard(cards.experience)
@@ -24,15 +25,18 @@ export function app (element) {
         div.appendChild(pDesc)
         element.querySelector('#hand').appendChild(div)
         div.addEventListener('click', (e) => {
-            dealDamage(1)
-            removeCard(div)
-            createCard(cards.introduction)
+            if(!_isPrinting) {
+                dealDamage(5)
+                printLine('Detta är en monolog och ett cv', '#monologue', 0)
+                removeCard(div)
+                createCard(cards.introduction)
+            }
         })
     }
 
     function dealDamage(amount) {
         let e = element.querySelector('.health')
-        _hp -= 5
+        _hp -= amount
         e.style.width = _hp + '%'
     }
 
@@ -44,12 +48,16 @@ export function app (element) {
     }
 
     function printLine(string, id, index) {
+        _isPrinting = true
         if(index < string.length) {
             element.querySelector(id).innerHTML += string.charAt(index)
             index++
             sleep(_speed).then(() => {
                 printLine(string, id, index)
             })
+        }
+        else {
+            _isPrinting = false
         }
     }
 
