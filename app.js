@@ -1,17 +1,32 @@
+import cards from './cards.json'
+
 export function app (element) {
     const _speed = 100
-    let i = 0
+    const _animationSpeed = 500
     const _introduction = 'Detta är ett CV Detta är ett CV'
-    element.querySelector('#start').addEventListener('click', (e) => {
-        printLine(_introduction, '#test')
+    element.querySelector('.card-container').addEventListener('click', (e) => {
+        console.log("Click")
+        element.querySelector('#introduction').classList.add("removed")
+        removeCard('#introduction')
+        printLine(cards.introduction.title, '#test', 0)
     })
 
-    function printLine(string, id) {
-        if(i < string.length) {
-            element.querySelector(id).innerHTML += string.charAt(i)
-            i++
+    function createCard(index) {
+        
+    }
+
+    function removeCard(id) {
+        sleep(_animationSpeed).then(() => {
+            element.querySelector(id).remove()
+        })
+    }
+
+    function printLine(string, id, index) {
+        if(index < string.length) {
+            element.querySelector(id).innerHTML += string.charAt(index)
+            index++
             sleep(_speed).then(() => {
-                printLine(string, id)
+                printLine(string, id, index)
             })
         }
     }
