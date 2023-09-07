@@ -3,16 +3,24 @@ import cards from './cards.json'
 export function app (element) {
     const _speed = 100
     const _animationSpeed = 500
-    const _introduction = 'Detta är ett CV Detta är ett CV'
     element.querySelector('.card-container').addEventListener('click', (e) => {
         console.log("Click")
+        createCard('introduction')
+
         element.querySelector('#introduction').classList.add("removed")
         removeCard('#introduction')
         printLine(cards.introduction.title, '#test', 0)
     })
 
-    function createCard(index) {
-        
+    function createCard(title) {
+        let e = document.createElement('div')
+        e.innerHTML = (`
+        <div id="introduction" class="card-container">
+            <p class="card-title">Introduction</p>
+            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. A quod, ea minima, doloremque odit ratione eligendi possimus dignissimos aliquid dolore tempora enim itaque, vero tenetur numquam dolorum! Aperiam, aliquid ipsam.</p>
+        </div>
+        `)
+        element.querySelector('#hand').appendChild(e)
     }
 
     function removeCard(id) {
