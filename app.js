@@ -5,22 +5,27 @@ export function app (element) {
     const _animationSpeed = 500
     element.querySelector('.card-container').addEventListener('click', (e) => {
         console.log("Click")
-        createCard('introduction')
+        createCard(cards.introduction)
 
         element.querySelector('#introduction').classList.add("removed")
         removeCard('#introduction')
         printLine(cards.introduction.title, '#test', 0)
     })
 
-    function createCard(title) {
-        let e = document.createElement('div')
-        e.innerHTML = (`
-        <div id="introduction" class="card-container">
-            <p class="card-title">Introduction</p>
-            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. A quod, ea minima, doloremque odit ratione eligendi possimus dignissimos aliquid dolore tempora enim itaque, vero tenetur numquam dolorum! Aperiam, aliquid ipsam.</p>
-        </div>
-        `)
-        element.querySelector('#hand').appendChild(e)
+    function createCard(name) {
+        let div = document.createElement('div')
+        let pTitle = document.createElement('p')
+        let pDesc = document.createElement('p')
+        div.classList.add('card-container')
+        pTitle.classList.add('card-title')
+        pDesc.classList.add('card-description')
+
+        pTitle.innerHTML = name.title
+        pDesc.innerHTML = name.content
+
+        div.appendChild(pTitle)
+        div.appendChild(pDesc)
+        element.querySelector('#hand').appendChild(div)
     }
 
     function removeCard(id) {
