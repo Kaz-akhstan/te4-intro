@@ -84,10 +84,26 @@ h1 {
 
 }
 
+.healthbar {
+  background-color: #213547;
+  border: white solid 1px;
+  width: 40rem;
+  height: 2rem;
+}
+
+.health {
+  height: 2rem;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  background-color: #646cff;
+}
+
 #app {
-  justify-content: left;
-  flex-direction: column;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 0 auto;
   padding: 1rem 2rem;
 }

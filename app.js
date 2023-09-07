@@ -3,14 +3,10 @@ import cards from './cards.json'
 export function app (element) {
     const _speed = 100
     const _animationSpeed = 500
-    element.querySelector('.card-container').addEventListener('click', (e) => {
-        console.log("Click")
-        createCard(cards.introduction)
 
-        element.querySelector('#introduction').classList.add("removed")
-        removeCard('#introduction')
-        printLine(cards.introduction.title, '#test', 0)
-    })
+    createCard(cards.introduction)
+    createCard(cards.experience)
+    createCard(cards.education)
 
     function createCard(name) {
         let div = document.createElement('div')
@@ -26,11 +22,16 @@ export function app (element) {
         div.appendChild(pTitle)
         div.appendChild(pDesc)
         element.querySelector('#hand').appendChild(div)
+        div.addEventListener('click', (e) => {
+            removeCard(div)
+            createCard(cards.introduction)
+        })
     }
 
-    function removeCard(id) {
+    function removeCard(obj) {
+        obj.classList.add('removed')
         sleep(_animationSpeed).then(() => {
-            element.querySelector(id).remove()
+            obj.remove()
         })
     }
 
