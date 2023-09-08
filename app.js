@@ -3,8 +3,11 @@ import cards from './cards.json'
 export function app (element) {
     const _speed = 100
     const _animationSpeed = 500
+    const _damageAnimationSpeed = 1000
     let _hp = 100
     let _isPrinting = false
+    let _cardIndex = 0
+    let _amountOfCards = Object.keys(cards).length
 
     createCard(cards.introduction)
     createCard(cards.experience)
@@ -26,8 +29,8 @@ export function app (element) {
         element.querySelector('#hand').appendChild(div)
         div.addEventListener('click', (e) => {
             if(!_isPrinting) {
-                dealDamage(5)
-                printLine('Detta är en monolog och ett cv', '#monologue', 0)
+                dealDamage(100/_amountOfCards)
+                printLine(name.response, '#monologue', 0)
                 removeCard(div)
                 createCard(cards.introduction)
             }
@@ -35,9 +38,16 @@ export function app (element) {
     }
 
     function dealDamage(amount) {
-        let e = element.querySelector('.health')
+        const d = element.querySelector('.hidden-number')
+        const e = element.querySelector('.health')
+        d.style.animationName = ''
+        void d.offsetWidth  //Varför funkar det???
         _hp -= amount
+        if(_hp < 0)
+            _hp = 0
         e.style.width = _hp + '%'
+        d.style.animationName = 'number'
+        d.innerHTML = '-' + Math.round(amount) + '%'
     }
 
     function removeCard(obj) {
@@ -48,6 +58,9 @@ export function app (element) {
     }
 
     function printLine(string, id, index) {
+        if(!_isPrinting) {
+            element.querySelector(id).innerHTML = ""
+        }
         _isPrinting = true
         if(index < string.length) {
             element.querySelector(id).innerHTML += string.charAt(index)

@@ -42,10 +42,6 @@ h1 {
   color: #b3b3b3;
 }
 
-.shoot-in {
-  
-}
-
 .removed {
   transform: translate(0, -100rem)!important;
   transition: 0.5s ease-in-out;
@@ -64,6 +60,7 @@ h1 {
   transform: translate(0, -17rem);
   transition: 0.2s ease-in-out;
   z-index: 10;
+  filter: drop-shadow(0 0 1rem #fff);
 }
 
 .card-container {
@@ -90,6 +87,21 @@ h1 {
   
 }
 
+.hidden-number {
+  opacity: 0;
+  font-weight: bold;
+}
+
+.damage-number {
+
+  animation-duration: 2s;
+}
+
+@keyframes number {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-5rem); opacity: 0; }
+ }
+
 .healthbar {
   background-color: #000;
   border: white solid 1px;
@@ -112,6 +124,9 @@ h1 {
   image-rendering: crisp-edges;
   width: 10rem;
   padding: 0;
+  opacity: 1;
+  transition: 1s;
+
   animation-name: idle;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
@@ -126,6 +141,7 @@ h1 {
 
 .monologue {
   margin: 0;
+  font-size: large;
 }
 
 @keyframes idle {

@@ -1,20 +1,32 @@
 {
     "introduction": {
         "title": "Introduction",
-        "content": "Lorem Ipsum",
-        "damage": 1,
-        "cost": 1
+        "content": "Why don't we start by telling me a bit about yourself? Who are you?",
+        "response": "Lorem Ipsum"
     },
     "experience": {
         "title": "Experience",
         "content": "Lorem Ipsum",
-        "damage": 4,
-        "cost": 3
+        "response": "Lorem Ipsum"
     },
     "education": {
         "title": "Education",
         "content": "Lorem Ipsum",
-        "damage": 2,
-        "cost": 2
+        "response": "Lorem Ipsum"
+    },
+    "1": {
+        "title": "Education",
+        "content": "Lorem Ipsum",
+        "response": "Lorem Ipsum"
+    },
+    "2": {
+        "title": "Education",
+        "content": "Lorem Ipsum",
+        "response": "Lorem Ipsum"
+    },
+    "3": {
+        "title": "Education",
+        "content": "Lorem Ipsum",
+        "response": "Lorem Ipsum"
     }
 }
