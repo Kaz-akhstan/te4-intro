@@ -75,7 +75,7 @@ h1 {
   width: 15rem;
   height: 21.5rem;
   border-radius: 1rem;
-  background-color: #213547;
+  background-color: #000;
   box-sizing: border-box; 
   padding: .9rem;
   z-index: 0;
@@ -91,7 +91,7 @@ h1 {
 }
 
 .healthbar {
-  background-color: #213547;
+  background-color: #000;
   border: white solid 1px;
   width: 40rem;
   height: 2rem;
@@ -101,7 +101,16 @@ h1 {
   height: 2rem;
   width: 100%;
   transition: 0.3s ease-in-out;
-  background-color: #646cff;
+  background-color: #ffffff;
+}
+
+img {
+  image-rendering: crisp-edges;
+  width: 10rem;
+}
+
+.monologue {
+  margin: 4rem 0;
 }
 
 #app {

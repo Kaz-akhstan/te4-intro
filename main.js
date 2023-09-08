@@ -9,6 +9,9 @@ document.querySelector('#app').innerHTML = `
     <dir>
         <p id="monologue" class="monologue"></p>
     </dir>
+    <div class="enemy-container">
+        <img src="/wizard.png" alt="">
+    </div>
     <div id="hand" class="hand">
     </div>
 `
