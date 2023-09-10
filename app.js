@@ -7,7 +7,7 @@ export function app (element) {
     let _hp = 100
     let _isPrinting = false
     let _cardIndex = 0
-    let _questionIndex = 5
+    let _questionIndex = 0
     let _amountOfCards = Object.keys(cards).length
     let _cardQueue = [cards.introduction, cards.experience, cards.education , cards.skills, cards.contact, cards.summary]
     let _question
@@ -15,8 +15,6 @@ export function app (element) {
     createCard(_cardQueue[_cardIndex++])
     createCard(_cardQueue[_cardIndex++])
     createCard(_cardQueue[_cardIndex++])
-    
-    createCard(_cardQueue[5])
 
     askQuestion()
 
