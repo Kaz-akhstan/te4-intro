@@ -1,32 +1,38 @@
 {
     "introduction": {
         "title": "Introduction",
-        "content": "Why don't we start by telling me a bit about yourself? Who are you?",
-        "response": "Lorem Ipsum"
+        "content": "My name is Rasmus Johansson and I ",
+        "response": "Lorem Ipsum",
+        "question": "Why don't you start by introducing yourself."
     },
     "experience": {
         "title": "Experience",
-        "content": "Lorem Ipsum",
-        "response": "Lorem Ipsum"
+        "content": "I've worked in ",
+        "response": "Lorem Ipsum",
+        "question": "Have you had previous work experience?"
     },
     "education": {
         "title": "Education",
-        "content": "Lorem Ipsum",
-        "response": "Lorem Ipsum"
+        "content": "NTI 2020-2023",
+        "response": "Lorem Ipsum",
+        "question": "Where did you learn this?"
     },
-    "1": {
-        "title": "Education",
-        "content": "Lorem Ipsum",
-        "response": "Lorem Ipsum"
+    "skills": {
+        "title": "Skills",
+        "content": "Lots",
+        "response": "Lorem Ipsum",
+        "question": "Skills?"
     },
-    "2": {
-        "title": "Education",
+    "contact": {
+        "title": "Contact",
         "content": "Lorem Ipsum",
-        "response": "Lorem Ipsum"
+        "response": "Lorem Ipsum",
+        "question": "Contact?"
     },
-    "3": {
-        "title": "Education",
+    "summary": {
+        "title": "Summary",
         "content": "Lorem Ipsum",
-        "response": "Lorem Ipsum"
+        "response": "Lorem Ipsum",
+        "question": "Summary?"
     }
 }

@@ -48,6 +48,11 @@ h1 {
   transition: 0.5s ease-in-out;
 }
 
+.fade-away {
+  opacity: 0!important;
+  transition: 3s!important;
+}
+
 .hand {
   display: flex;
   justify-content: center;
@@ -84,17 +89,12 @@ h1 {
   text-align: center;
 }
 
-.card-description {
-  
-}
-
 .hidden-number {
   opacity: 0;
   font-weight: bold;
 }
 
 .damage-number {
-
   animation-duration: 2s;
 }
 
@@ -141,10 +141,13 @@ h1 {
   opacity: 1;
   transition: 1s;
 
+  filter: drop-shadow(0 0 4px #fff);
+}
+
+.enemy-idle {
   animation-name: idle;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
-  filter: drop-shadow(0 0 4px #fff);
 }
 
 .monologue-container {

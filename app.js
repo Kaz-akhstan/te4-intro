@@ -7,11 +7,39 @@ export function app (element) {
     let _hp = 100
     let _isPrinting = false
     let _cardIndex = 0
+    let _questionIndex = 5
     let _amountOfCards = Object.keys(cards).length
+    let _cardQueue = [cards.introduction, cards.experience, cards.education , cards.skills, cards.contact, cards.summary]
+    let _question
 
-    createCard(cards.introduction)
-    createCard(cards.experience)
-    createCard(cards.education)
+    createCard(_cardQueue[_cardIndex++])
+    createCard(_cardQueue[_cardIndex++])
+    createCard(_cardQueue[_cardIndex++])
+    
+    createCard(_cardQueue[5])
+
+    askQuestion()
+
+    function askQuestion() {
+        if(!_question && _questionIndex < _amountOfCards) {
+            printLine(_cardQueue[_questionIndex].question, '#monologue', 0)
+            _question = _cardQueue[_questionIndex]
+        }
+        if(_questionIndex >= _amountOfCards) {
+            element.querySelector('.enemy').classList.remove('enemy-idle')
+            element.querySelector('.enemy').classList.add('fade-away')
+        }
+    }
+
+    function answerQuestion(answer) {
+        let correct = false
+        if(answer === _question) {
+            _question = undefined
+            _questionIndex++
+            correct = true
+        }
+        return correct
+    }
 
     function createCard(name) {
         let div = document.createElement('div')
@@ -28,11 +56,14 @@ export function app (element) {
         div.appendChild(pDesc)
         element.querySelector('#hand').appendChild(div)
         div.addEventListener('click', (e) => {
-            if(!_isPrinting) {
+            
+            if(!_isPrinting && answerQuestion(name)) {
                 dealDamage(100/_amountOfCards)
-                printLine(name.response, '#monologue', 0)
+                askQuestion()
                 removeCard(div)
-                createCard(cards.introduction)
+                if(_cardIndex < _amountOfCards) {
+                    createCard(_cardQueue[_cardIndex++])
+                }
             }
         })
     }
