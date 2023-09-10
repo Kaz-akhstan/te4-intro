@@ -4,6 +4,7 @@ import { app } from './app.js'
 document.querySelector('#app').innerHTML = `
     <div class="healthbar">
         <div class="health"></div>
+        <p class="title">Henchman</p>
     </div>
     <div class="monologue-container">
         <p id="monologue" class="monologue"></p>
