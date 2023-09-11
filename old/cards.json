@@ -1,0 +1,38 @@
+{
+    "introduction": {
+        "title": "Introduction",
+        "content": "My name is Rasmus Johansson and I ",
+        "response": "Lorem Ipsum",
+        "question": "Why don't you start by introducing yourself."
+    },
+    "experience": {
+        "title": "Experience",
+        "content": "I've worked in ",
+        "response": "Lorem Ipsum",
+        "question": "Have you had previous work experience?"
+    },
+    "education": {
+        "title": "Education",
+        "content": "NTI 2020-2023",
+        "response": "Lorem Ipsum",
+        "question": "Where did you learn this?"
+    },
+    "skills": {
+        "title": "Skills",
+        "content": "Lots",
+        "response": "Lorem Ipsum",
+        "question": "Skills?"
+    },
+    "contact": {
+        "title": "Contact",
+        "content": "Lorem Ipsum",
+        "response": "Lorem Ipsum",
+        "question": "Contact?"
+    },
+    "summary": {
+        "title": "Summary",
+        "content": "Lorem Ipsum",
+        "response": "Lorem Ipsum",
+        "question": "Summary?"
+    }
+}
