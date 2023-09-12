@@ -1,25 +1,35 @@
 import choices from './choices.json'
 
 export function app (element) {
-    const _buttons = [element.querySelector('#a0'), element.querySelector('#a1')]
+    let _buttons = []
     const _title = element.querySelector('#title')
     const _picture = element.querySelector('#picture')
     const _desc = element.querySelector('#desc')
+    const _btnContainer = element.querySelector('#btns')
     const _speed = 100
     let _isPrinting = false
     let _choiceIndex = 0
 
-    _buttons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            processChoice(button)
-        })
-    })
+    function addButton(amount) {
+        _buttons = []
+        _btnContainer.innerHTML = ''
+        for(let i = 0; i < amount; i++) {
+            let b = document.createElement('button')
+            b.id = 'a'+i
+            b.addEventListener('click', (e) => {
+                processChoice(b)
+            })
+            _btnContainer.appendChild(b)
+            _buttons.push(b)
+        }
+    }
 
     loadScenario()
 
     function loadScenario() {
         _title.innerHTML = choices[_choiceIndex].title
         _desc.innerHTML = choices[_choiceIndex].content
+        addButton(choices[_choiceIndex].options.length)
         _buttons.forEach(button => {
             button.innerHTML = choices[_choiceIndex].options[parseInt(button.id[1])].content
         });

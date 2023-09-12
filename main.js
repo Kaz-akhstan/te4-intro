@@ -8,9 +8,7 @@ import { app } from './app.js'
             <p>Pictures here</p>
         </div>
         <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, numquam facere. Dolor praesentium sint, aliquid amet laudantium eius totam earum dolorem quia saepe quo omnis perspiciatis, nihil cupiditate dignissimos fugit.</p>
-        <div class="choices">
-            <button id="a0">[1]</button>
-            <button id="a1">[2]</button>
+        <div id="btns" class="choices">
         </div>
     </div>
 `

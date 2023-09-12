@@ -9,7 +9,7 @@
             }, 
             {
                 "content": "Go around",
-                "consequence": "2"
+                "consequence": "0"
             }   
         ]
     },
@@ -19,7 +19,7 @@
         "options": [
             {
                 "content": "Keep going",
-                "consequence": "3"
+                "consequence": "2"
             }, 
             {
                 "content": "Turn back",
@@ -28,15 +28,33 @@
         ]
     },
     {
-        "title": "Mountain Area",
-        "content": "Mountain",
+        "title": "Forest Area",
+        "content": "Pond",
         "options": [
             {
-                "content": "Go over",
-                "consequence": "4"
+                "content": "Relax near the pond",
+                "consequence": "3"
             }, 
             {
-                "content": "Turn back",
+                "content": "Move around it",
+                "consequence": "0"
+            }
+        ]
+    },
+    {
+        "title": "Pond Area",
+        "content": "Something shimmers from the pond",
+        "options": [
+            {
+                "content": "Reach for it",
+                "consequence": "3"
+            }, 
+            {
+                "content": "Inspect it",
+                "consequence": "0"
+            }, 
+            {
+                "content": "Leave it",
                 "consequence": "0"
             }
         ]
