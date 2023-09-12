@@ -1,41 +1,44 @@
-{
-    "0": {
+[
+    {
+        "title": "Forest Area",
         "content": "Forest",
-        "options": {
-            "option1": {
+        "options": [
+            {
                 "content": "Go through",
                 "consequence": "2"
             }, 
-            "option2": {
+            {
                 "content": "Go around",
                 "consequence": "3"
-            }
-        }
+            }   
+        ]
     },
-    "1": {
+    {
+        "title": "Forest Area",
         "content": "Heavy forest",
-        "options": {
-            "option1": {
+        "options": [
+            {
                 "content": "Keep going",
                 "consequence": "4"
             }, 
-            "option2": {
+            {
                 "content": "Turn back",
                 "consequence": "1"
             }
-        }
+        ]
     },
-    "2": {
+    {
+        "title": "Mountain Area",
         "content": "Mountain",
-        "options": {
-            "option1": {
+        "options": [
+            {
                 "content": "Go over",
                 "consequence": "5"
             }, 
-            "option2": {
+            {
                 "content": "Turn back",
                 "consequence": "1"
             }
-        }
+        ]
     }
-}
+]

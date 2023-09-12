@@ -4,9 +4,12 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --main-light: hsla(0, 0%, 85%);
+  --main-dark: hsl(0, 0%, 5%);
+
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: hsl(0, 0%, 5%);
+  color: var(--main-light);
+  background-color: var(--main-dark);
 
   overflow: hidden;
 
@@ -130,6 +133,10 @@ h1 {
   mix-blend-mode: difference;
 }
 
+.area-title {
+  text-align: center;
+}
+
 .choices {
   display: flex;
   flex-direction: column;
@@ -137,6 +144,16 @@ h1 {
 
 .enemy-container {
   height: 100%;
+}
+
+.picture-container {
+  width: 100%;
+  height: 20rem;
+
+  border: 1px solid var(--main-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .enemy {
@@ -174,7 +191,6 @@ h1 {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
@@ -192,7 +208,7 @@ h1 {
 }
 
 .container {
-  border: hsl(0, 0%, 70%) 1px solid;
+  border: var(--main-light) 1px solid;
   width: calc(100% - 4rem);
   height: calc(100% - 4rem);
 }
@@ -232,8 +248,8 @@ button {
 }
 button:hover {
   cursor: pointer;
-  background-color: white;
-  color: black;
+  background-color: var(--main-light);
+  color: var(--main-dark);
 }
 button:focus,
 button:focus-visible {
