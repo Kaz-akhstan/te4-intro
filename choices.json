@@ -5,11 +5,11 @@
         "options": [
             {
                 "content": "Go through",
-                "consequence": "2"
+                "consequence": "1"
             }, 
             {
                 "content": "Go around",
-                "consequence": "3"
+                "consequence": "2"
             }   
         ]
     },
@@ -19,11 +19,11 @@
         "options": [
             {
                 "content": "Keep going",
-                "consequence": "4"
+                "consequence": "3"
             }, 
             {
                 "content": "Turn back",
-                "consequence": "1"
+                "consequence": "0"
             }
         ]
     },
@@ -33,11 +33,11 @@
         "options": [
             {
                 "content": "Go over",
-                "consequence": "5"
+                "consequence": "4"
             }, 
             {
                 "content": "Turn back",
-                "consequence": "1"
+                "consequence": "0"
             }
         ]
     }

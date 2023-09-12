@@ -26,7 +26,8 @@ export function app (element) {
     }
 
     function processChoice(button) {
-        
+        _choiceIndex = choices[_choiceIndex].options[parseInt(button.id[1])].consequence
+        loadScenario()
     }
 
     function printLine(string, id, index) {
